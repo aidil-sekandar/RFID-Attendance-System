@@ -29,6 +29,15 @@ Time library: This library is required if you want to record the time of attenda
 8. An ESP8266 based WiFi module (if your arduino board doesn't have built-in WiFi)
 
 - Coding Steps:
+1. Connect the MFRC522 RFID module to the Arduino Nano using the jumper wires. Connect the SDA pin of the module to digital pin 10 of the Arduino, the SCK pin to digital pin 13, MOSI pin to digital pin 11, MISO pin to digital pin 12, and the IRQ pin to digital pin 2.
+2. Connect the LEDs to the breadboard and connect their negative pins to digital pins on the Arduino. The positive pins of the LEDs should be connected to a power supply.
+3. Connect the ESP8266 based WiFi module to the Arduino Nano using the jumper wires. Connect the TX pin of the module to digital pin 3 of the Arduino, and the RX pin to digital pin 2.
+4. Connect the TFT display to the Arduino Nano using jumper wires. The TFT display will require specific pins for communication and power, check the documentation for the display you are using for the pinout.
+5. Install the Arduino IDE on your computer and use it to upload the Arduino sketch to your board. The sketch should include the libraries for the MFRC522 module, Firebase, ESP8266 WiFi module, and TFT display.
+6. Create a new Firebase project and set up the database and authentication. You can use the Firebase API to connect your Arduino to the Firebase database and send and receive data.
+7. Once the hardware is set up and the software is uploaded, you can test your system by having someone swipe their RFID card and checking the Firebase database to see if their attendance has been recorded. The TFT display should show the status of the system and the name of the person who swiped the card.
+8. Once you have confirmed that everything is working correctly, you can integrate this system with your existing application or website.
+
 1. Gather the necessary components: Arduino board, RFID reader (e.g. MFRC522, PN532), RFID tags or cards, jumper wires, breadboard (optional), LEDs (optional for visual feedback), connections to power the system, a computer with Arduino IDE installed, and a Firebase account.
 2. Install the necessary Arduino libraries: Firebase Arduino library, MFRC522 or PN532 library, ESP8266WiFi library and Time library.
 3. Set up a new Firebase project and enable the Firebase Realtime Database.
